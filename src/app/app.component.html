@@ -1,15 +1,44 @@
 <div class="container">
-    <mat-tab-group >
-        <mat-tab label="First">
-            <div class="mat-tab-content">Нет данных</div>
-        </mat-tab>
-        <mat-tab label="First">
-            <div class="mat-tab-content">Нет данных</div>
-        </mat-tab>
-        <mat-tab label="First">
-            <div class="mat-tab-content">
-                <app-channels-page></app-channels-page>
+    
+    <nav class="navigation">
+
+        <div class="controls">
+            <div class="controls__item" [matMenuTriggerFor]="sortMenu">
+                <span>Сортировка</span>
             </div>
-        </mat-tab>
-    </mat-tab-group>
+            <div class="controls__item" [matMenuTriggerFor]="filterMenu">
+                <span>Телеканалы</span>
+            </div>
+        </div>
+
+        <mat-tab-group [selectedIndex]="selectedTabIndex">
+            <mat-tab label="First">
+                <div class="mat-tab-content">Нет данных</div>
+            </mat-tab>
+            <mat-tab label="Secind">
+                <div class="mat-tab-content">Нет данных</div>
+            </mat-tab>
+            <mat-tab label="Телеканалы">
+                <div class="mat-tab-content">
+                    <app-channels-page></app-channels-page>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+
+    </nav>
+    
 </div>
+
+
+<mat-menu #sortMenu>
+    <div mat-menu-item>По умолчанию</div>
+    <div mat-menu-item>По возрастанию (А-Я)</div>
+    <div mat-menu-item>По убыванию (Я-А)</div>
+</mat-menu>
+
+<mat-menu #filterMenu>
+    <div mat-menu-item>Все телеканалы</div>
+    <div mat-menu-item>Жанр 1</div>
+    <div mat-menu-item>Жанр 2</div>
+    <div mat-menu-item class="cancel">Сбросить выбор</div>
+</mat-menu>

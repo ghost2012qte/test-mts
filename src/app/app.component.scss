@@ -7,3 +7,19 @@
 .mat-tab-content {
     padding-top: 20px;
 }
+.navigation {
+    position: relative;
+}
+.controls {
+    z-index: 1000;
+    position: absolute;
+    right: -20px;
+    top: 9px;
+    display: flex;
+    &__item {
+        cursor: pointer;
+        padding: 5px 17px;
+        margin-right: 23px;
+        border: 1px solid #415165;
+    }
+}

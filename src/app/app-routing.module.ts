@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChannelsPageComponent } from './pages/channels-page/channels-page.component';
-import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
-const routes: Routes = [
-    { path: 'channels', component: ChannelsPageComponent },
-    { path: '**', component: NotFoundPageComponent }
-];
+const routes: Routes = [];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
