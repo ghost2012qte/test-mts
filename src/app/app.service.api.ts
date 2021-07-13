@@ -5,9 +5,9 @@ import { IChannelsResponse } from "./app.types";
 
 @Injectable({ providedIn: 'root' })
 export class AppApiService {
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
-  public getChannels(): Observable<IChannelsResponse> {
-    return this.http.get<IChannelsResponse>('assets/channels.json')
-  }
+    public getChannels(): Observable<IChannelsResponse> {
+        return this.http.get<IChannelsResponse>('assets/channels.json')
+    }
 }

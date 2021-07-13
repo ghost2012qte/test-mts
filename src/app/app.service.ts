@@ -6,30 +6,29 @@ import { IChannel } from "./app.types";
 
 @Injectable({ providedIn: 'root' })
 export class AppService {
-  constructor(
-    private apiService: AppApiService
-  ) {}
 
-  public getChannels(): Observable<IChannel> {
-    return this.apiService.getChannels().pipe(map((response) => {
-      return response.channelDetails
-    }))
-  }
+    constructor(private apiService: AppApiService) { }
 
-  public setFilter(filter: string): void {
-    localStorage.setItem('filter', filter);
-  }
+    public getChannels(): Observable<IChannel> {
+        return this.apiService.getChannels().pipe(map((response) => {
+            return response.channelDetails
+        }))
+    }
 
-  public setSorting(sorting: string): void {
-   localStorage.setItem('sorting', sorting);
-  }
+    public setFilter(filter: string): void {
+        localStorage.setItem('filter', filter);
+    }
 
-  public getFilter(): string | null {
-    return localStorage.getItem('filter');
-  }
+    public setSorting(sorting: string): void {
+        localStorage.setItem('sorting', sorting);
+    }
 
-  public getSorting(): string | null {
-    return localStorage.getItem('sorting');
-  }
+    public getFilter(): string | null {
+        return localStorage.getItem('filter');
+    }
+
+    public getSorting(): string | null {
+        return localStorage.getItem('sorting');
+    }
 
 }

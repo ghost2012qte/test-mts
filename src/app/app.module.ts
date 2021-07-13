@@ -21,6 +21,7 @@ import { AppApiService } from './app.service.api';
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         BrowserAnimationsModule,
         MaterialModule
