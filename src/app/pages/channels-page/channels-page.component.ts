@@ -35,4 +35,8 @@ export class ChannelsPageComponent implements OnInit {
             })
     }
 
+    createTooltip(channel: IChannel): string {
+      return channel.name + channel.introduce;
+    }
+
 }

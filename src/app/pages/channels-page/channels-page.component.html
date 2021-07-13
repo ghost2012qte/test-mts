@@ -3,8 +3,11 @@
     <div class="grid">
 
       <ng-container *ngFor="let channel of channels">
-        <div [ngStyle]="{'background-image': 'url(' + channel.picture.backgrounds[0] + ')'}" class="keke">
-          <div  class="keke__content">
+        <div class="keke">
+          <div [ngStyle]="{'background-image': 'url(' + channel.picture.backgrounds[0] + ')'}"
+               [matTooltip]="createTooltip(channel)"
+               matTooltipClass="tooltip"
+               class="keke__content">
 
           </div>
         </div>
