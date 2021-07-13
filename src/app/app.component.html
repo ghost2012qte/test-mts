@@ -31,14 +31,14 @@
 
 
 <mat-menu #sortMenu>
-    <div mat-menu-item>По умолчанию</div>
-    <div mat-menu-item>По возрастанию (А-Я)</div>
-    <div mat-menu-item>По убыванию (Я-А)</div>
+    <div mat-menu-item (click)="urlMask.pushToMask('sort', '')">По умолчанию</div>
+    <div mat-menu-item (click)="urlMask.pushToMask('sort', 'asc')">По возрастанию (А-Я)</div>
+    <div mat-menu-item (click)="urlMask.pushToMask('sort', 'desc')">По убыванию (Я-А)</div>
 </mat-menu>
 
 <mat-menu #filterMenu>
-    <div mat-menu-item>Все телеканалы</div>
-    <div mat-menu-item>Жанр 1</div>
-    <div mat-menu-item>Жанр 2</div>
-    <div mat-menu-item class="cancel">Сбросить выбор</div>
+    <div mat-menu-item (click)="urlMask.pushToMask('filter', '')">Все телеканалы</div>
+    <div mat-menu-item (click)="urlMask.pushToMask('filter', '1')">Жанр 1</div>
+    <div mat-menu-item (click)="urlMask.pushToMask('filter', '2')">Жанр 2</div>
+    <div mat-menu-item class="cancel" (click)="urlMask.pushToMask('filter', '')">Сбросить выбор</div>
 </mat-menu>

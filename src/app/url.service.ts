@@ -24,6 +24,6 @@ export class UrlService {
 
     pushToMask(key: string, value: string) {
         this.mask.setKey(key, value);
-        this.router.navigate(['/'], {queryParams: this.mask});
+        this.router.navigate(['/'], {queryParams: this.mask.mask});
     }
 }

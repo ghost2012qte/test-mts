@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UrlService } from './url.service';
 
 @Component({
     selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent implements OnInit {
     selectedTabIndex = 2;
 
     constructor(
+        public urlMask: UrlService,
         private router: Router,
         private route: ActivatedRoute) {}
 
