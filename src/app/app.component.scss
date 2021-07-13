@@ -5,12 +5,13 @@
     max-width: 1040px;
 }
 .mat-tab-content {
-    padding-top: 20px;
+    padding: 20px 0;
 }
 .navigation {
     position: relative;
 }
 .controls {
+    user-select: none;
     z-index: 1000;
     position: absolute;
     right: -20px;

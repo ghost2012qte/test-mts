@@ -2,17 +2,16 @@
 
     <div class="grid">
 
-      <ng-container *ngFor="let channel of channels">
-        <div class="keke">
-          <div [ngStyle]="{'background-image': 'url(' + channel.picture.backgrounds[0] + ')'}"
-               [matTooltip]="createTooltip(channel)"
-               matTooltipClass="tooltip"
-               class="keke__content">
-
-          </div>
+        <div *ngFor="let channel of channels" class="keke">
+            <div class="keke__content"
+                 [matTooltip]="createTooltip(channel)"
+                 matTooltipClass="tooltip"
+                 [ngStyle]="{'background-image': 'url(' + channel.picture.backgrounds[0] + ')'}" >
+            </div>
         </div>
-      </ng-container>
 
     </div>
+
+    <button (click)="loadMore()" style="margin: 50px auto 0; display: table;">ПОКАЗАТЬ ЕЩЕ</button>
 
 </div>

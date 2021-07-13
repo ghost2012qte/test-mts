@@ -7,7 +7,7 @@ export interface IChannel {
   name: string;
   introduce: string;
   picture: IPicture;
-  genres: IGender[];
+  genres: IGenre[];
 }
 
 export interface IPicture {
@@ -19,7 +19,7 @@ export interface IPicture {
   others: string[];
 }
 
-export interface IGender {
+export interface IGenre {
   genreID: string;
   genreType: string;
   genreName: string;
