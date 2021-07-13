@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +9,8 @@ import { ChannelsPageComponent } from './pages/channels-page/channels-page.compo
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { AppService } from './app.service';
+import { AppApiService } from './app.service.api';
 
 @NgModule({
     declarations: [
@@ -22,7 +25,10 @@ import { MaterialModule } from './material.module';
         BrowserAnimationsModule,
         MaterialModule
     ],
-    providers: [],
+    providers: [
+      AppService,
+      AppApiService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
