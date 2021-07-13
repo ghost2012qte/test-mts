@@ -9,7 +9,7 @@ export class AppService {
 
     constructor(private apiService: AppApiService) { }
 
-    public getChannels(): Observable<IChannel> {
+    public getChannels(): Observable<IChannel[]> {
         return this.apiService.getChannels().pipe(map((response) => {
             return response.channelDetails
         }))
