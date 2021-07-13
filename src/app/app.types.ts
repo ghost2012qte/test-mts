@@ -1,6 +1,6 @@
 export interface IChannelsResponse {
   total: string;
-  channelDetails: IChannel;
+  channelDetails: IChannel[];
 }
 
 export interface IChannel {
