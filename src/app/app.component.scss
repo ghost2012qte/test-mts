@@ -11,6 +11,7 @@
     position: relative;
 }
 .controls {
+    user-select: none;
     z-index: 1000;
     position: absolute;
     right: -20px;
