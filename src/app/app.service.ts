@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
-import { concatAll, distinct, filter, map, mergeMap, reduce, toArray } from "rxjs/operators";
+import { Observable } from "rxjs";
+import { concatAll, distinct, filter, map, reduce, toArray } from "rxjs/operators";
 import { AppApiService } from "./app.service.api";
 import { IChannel, IGenre } from "./app.types";
 
