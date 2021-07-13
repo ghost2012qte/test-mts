@@ -11,12 +11,16 @@ $vertical_shift: 24px;
 
 .keke {
     cursor: pointer;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #797979;
+
     &__content {
         width: 100%;
         height: 100%;
-        background: tomato;
         transition: transform 100ms ease-in;
-        border-radius: 5px;
     }
     &:hover .keke__content {
         transform: translateY(-10px);
@@ -33,19 +37,19 @@ $vertical_shift: 24px;
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
 }
 
 @media screen and (min-width: 720px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
 }
 
 @media screen and (min-width: 1200px) {
     .grid {
         grid-template-columns: repeat(6, 1fr);
     }
-    
+
 }

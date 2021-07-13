@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
 import { UrlMask } from 'src/app/classes/url-mask';
 import { UrlService } from 'src/app/url.service';
-import { concatAll, repeatWhen, take, takeUntil, toArray, filter } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
 import { IChannel } from 'src/app/app.types';
 import { Subject } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
     templateUrl: './channels-page.component.html',
     styleUrls: ['./channels-page.component.scss']
 })
-export class ChannelsPageComponent implements OnInit, OnDestroy{
+export class ChannelsPageComponent implements OnInit, OnDestroy {
 
     mask: UrlMask;
     channels: IChannel[];
