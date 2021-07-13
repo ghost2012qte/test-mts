@@ -2,13 +2,11 @@
 
     <div class="grid">
 
-      <ng-container *ngFor="let channel of channels">
-        <div [ngStyle]="{'background-image': 'url(' + channel.picture.backgrounds[0] + ')'}" class="keke">
-          <div  class="keke__content">
+        <div *ngFor="let channel of channels" class="keke">
+            <div class="keke__content" [ngStyle]="{'background-image': 'url(' + channel.picture.backgrounds[0] + ')'}" >
 
-          </div>
+            </div>
         </div>
-      </ng-container>
 
     </div>
 

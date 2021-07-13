@@ -37,6 +37,8 @@ export class ChannelsPageComponent implements OnInit, OnDestroy {
                 this.filter = params?.filter || null;
                 this.loadChannels();
             })
+
+        this.appService.getGeneries().subscribe(console.log);
     }
 
     async loadChannels() {

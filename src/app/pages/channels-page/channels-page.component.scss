@@ -11,27 +11,22 @@ $vertical_shift: 24px;
 
 .keke {
     cursor: pointer;
-    border-radius: 5px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #797979;
 
     &__content {
         width: 100%;
         height: 100%;
+        border-radius: 5px;
+        background-color: #797979;
+        background-size: cover;
         transition: transform 100ms ease-in;
     }
     &:hover .keke__content {
         transform: translateY(-10px);
     }
 }
-
-
-
-
-
-
 
 @media screen and (min-width: 320px) {
     .grid {
