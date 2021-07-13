@@ -13,13 +13,12 @@ import { IChannel } from 'src/app/app.types';
 export class ChannelsPageComponent implements OnInit {
 
     mask: UrlMask;
-    channels: IChannel;
-
-
+    channels: IChannel[];
 
     constructor(
         private appService: AppService,
-        private urlService: UrlService) { }
+        private urlService: UrlService
+    ) { }
 
     ngOnInit() {
         this.appService
@@ -31,7 +30,7 @@ export class ChannelsPageComponent implements OnInit {
                 toArray()
             )
             .subscribe(channels => {
-                // this.channels = channels;
+                this.channels = channels;
                 console.log(channels);
             })
     }

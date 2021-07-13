@@ -2,97 +2,13 @@
 
     <div class="grid">
 
-        <div class="keke">
-            <div class="keke__content"></div>
+      <ng-container *ngFor="let channel of channels">
+        <div [ngStyle]="{'background-image': 'url(' + channel.picture.backgrounds[0] + ')'}" class="keke">
+          <div  class="keke__content">
+
+          </div>
         </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
-    
-        <div class="keke">
-            <div class="keke__content"></div>
-        </div>
+      </ng-container>
 
     </div>
 
